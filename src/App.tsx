@@ -336,10 +336,10 @@ export default function App() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="p-8 md:p-12 rounded-3xl bg-zinc-900 border border-black/10 text-center max-w-5xl mx-auto relative overflow-hidden shadow-2xl"
+            className="p-8 md:p-12 rounded-3xl bg-zinc-900 border border-black/10 text-center max-w-5xl mx-auto relative overflow-hidden shadow-2xl transform-gpu"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-[100px] opacity-10 mix-blend-screen" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-200 rounded-full blur-[100px] opacity-10 mix-blend-screen" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl transform-gpu pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl transform-gpu pointer-events-none" />
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight text-white uppercase">Let's Connect</h2>

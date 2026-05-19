@@ -97,9 +97,9 @@ function HeroGeometric({
             <div className="absolute inset-0 bg-zinc-50" />
 
             {/* Background elements */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[10%] left-[5%] w-[40vw] h-[40vw] max-w-2xl max-h-2xl rounded-full bg-purple-100/50 blur-[100px]" />
-                <div className="absolute bottom-[10%] right-[5%] w-[30vw] h-[30vw] max-w-xl max-h-xl rounded-full bg-indigo-100/50 blur-[100px]" />
+            <div className="absolute inset-0 overflow-hidden pointer-events-none transform-gpu">
+                <div className="absolute top-[10%] left-[5%] w-[40vw] h-[40vw] max-w-2xl max-h-2xl rounded-full bg-purple-100/40 blur-3xl transform-gpu" />
+                <div className="absolute bottom-[10%] right-[5%] w-[30vw] h-[30vw] max-w-xl max-h-xl rounded-full bg-indigo-100/40 blur-3xl transform-gpu" />
                 
                 <ElegantShape
                     delay={0.3}
