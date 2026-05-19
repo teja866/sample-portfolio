@@ -80,7 +80,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowWelcome(false);
-    }, 1500); // Faster 3D intro 
+    }, 2000); // Wait long enough for the smooth, clean animation to be read
     return () => clearTimeout(timer);
   }, []);
 
@@ -94,65 +94,24 @@ export default function App() {
             exit={{ 
               y: "-100%", 
               opacity: 0,
-              rotateX: 45,
-              scale: 0.8,
-              filter: "blur(10px)"
             }}
-            transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+            transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
             className="fixed inset-0 z-[100] bg-[#f8f9fa] flex flex-col items-center justify-center overflow-hidden origin-top"
-            style={{ perspective: "1500px" }}
           >
-            <div className="absolute top-[10%] left-[5%] w-[40vw] h-[40vw] max-w-2xl max-h-2xl rounded-full bg-purple-100/50 blur-3xl pointer-events-none transform-gpu" />
-            <div className="absolute bottom-[10%] right-[5%] w-[30vw] h-[30vw] max-w-xl max-h-xl rounded-full bg-indigo-100/50 blur-3xl pointer-events-none transform-gpu" />
-
-            <div className="absolute inset-0 overflow-hidden pointer-events-none transform-gpu">
-              {[...Array(15)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-1.5 h-1.5 bg-zinc-300/50 rounded-full"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                  }}
-                  animate={{
-                    opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0],
-                  }}
-                  transition={{
-                    duration: 3 + Math.random() * 2,
-                    repeat: Infinity,
-                    delay: Math.random() * 2,
-                  }}
-                />
-              ))}
-            </div>
-
-            <div className="relative z-10 flex flex-wrap justify-center gap-3 md:gap-5 px-4">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-100 border border-black/5 mb-4 shadow-sm"
-              >
-                <div className="h-2 w-2 rounded-full bg-zinc-900 animate-pulse" />
-                <span className="text-zinc-600 tracking-widest text-sm font-bold uppercase">Welcome</span>
-              </motion.div>
-            </div>
-            
             <div className="relative z-10 flex flex-wrap justify-center gap-3 md:gap-5 px-4 mt-6">
               {["Welcome", "to", "my", "Portfolio"].map((word, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 100, rotateX: -90, rotateY: 20, translateZ: -200 }}
-                  animate={{ opacity: 1, y: 0, rotateX: 0, rotateY: 0, translateZ: 0 }}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ 
-                    duration: 0.8, 
-                    delay: i * 0.1 + 0.2, 
-                    ease: [0.21, 1.11, 0.81, 0.99] // Bouncy 3D swing
+                    duration: 0.6, 
+                    delay: i * 0.1, 
+                    ease: "easeOut" 
                   }}
                   className="origin-bottom will-change-transform"
                 >
-                    <h1 className={`text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter ${word === "Portfolio" ? "text-zinc-300 drop-shadow-sm" : "text-zinc-900"}`}>
+                    <h1 className={`text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter ${word === "Portfolio" ? "text-zinc-400 drop-shadow-sm" : "text-zinc-900"}`}>
                       {word}
                     </h1>
                 </motion.div>
@@ -162,7 +121,7 @@ export default function App() {
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 1.5, ease: "circInOut" }}
+              transition={{ duration: 1.8, ease: "circInOut" }}
               className="absolute bottom-0 left-0 h-2 bg-zinc-900 origin-left w-full"
             />
           </motion.div>
