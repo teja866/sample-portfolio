@@ -21,13 +21,7 @@ This project was rapidly prototyped and refined through **"Vibecoding"** using *
 
 ## 📸 Screenshots
 
-*(Currently showing placeholders. To add your real screenshots, take screenshots of your site, save them in your project folder, and replace the URLs below with `./your-image-name.png`)*
-
-![Hero Section](https://placehold.co/800x450/111827/06b6d4?text=Modern+Hero+Section)
-
-![3D Spline Demo](https://placehold.co/800x450/111827/a855f7?text=Interactive+3D+Spline+Robot)
-
-![Responsive Projects Grid](https://placehold.co/800x450/111827/ec4899?text=Projects+Grid+Display)
+![Website Output](./screenshot.png)
 
 ## �📦 Setting Up Locally
 
