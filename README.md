@@ -19,7 +19,17 @@ This portfolio was crafted to demonstrate high-performance UI engineering. Built
 
 This project was rapidly prototyped and refined through **"Vibecoding"** using **GitHub Copilot** as the AI programming assistant, directly within **Visual Studio Code**. The entire development experience involved natural language prompting, direct spatial visualization of components, and agentic UI adjustments to perfectly suit cross-device responsiveness. 
 
-## 📦 Setting Up Locally
+## � Screenshots
+
+*(Since this is a vibrant 3D site, here are some snapshot placeholders of the main experiences)*
+
+![Hero Section](https://via.placeholder.com/800x450.png?text=Modern+Hero+Section+with+Floating+Shapes)
+
+![3D Spline Demo](https://via.placeholder.com/800x450.png?text=Interactive+3D+Spline+Robot+Experience)
+
+![Responsive Projects Grid](https://via.placeholder.com/800x450.png?text=Bento+Grid+Projects+Display)
+
+## �📦 Setting Up Locally
 
 1. Clone the repository
 2. Install dependencies:
